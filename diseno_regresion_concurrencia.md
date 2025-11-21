@@ -1,10 +1,12 @@
-# Diseño detallado de la solución usando concurrencia
+# Diseño   concurrencia
 
 A continuación se presenta una versión ampliada y más completa del diseño para la regresión lineal empleando el paradigma de concurrencia (modelo Maestro–Trabajador). Incluye la explicación paso a paso y los diagramas provistos.
 
 ---
 
 ## **1. Arquitectura general del sistema concurrente**
+<img width="980" height="2048" alt="image" src="https://github.com/user-attachments/assets/18e0c447-11b7-421c-9ea5-d88427f280ca" />
+
 
 La regresión lineal con gradiente descendente es una operación que puede paralelizarse dividiendo el dataset en fragmentos y enviando cada fragmento a un **Worker** que calcula los gradientes locales. Un **Coordinador** central recibe esos gradientes, los combina y actualiza los parámetros.
 
@@ -37,6 +39,8 @@ Realiza:
 ---
 
 ## **2. Flujo detallado del algoritmo concurrente**
+<img width="2048" height="843" alt="image" src="https://github.com/user-attachments/assets/df737c70-41e1-4eab-8457-5e47363e4f86" />
+
 
 ### **Fase 1 — Inicialización**
 1. DataLoader divide el dataset en K trozos.  
@@ -73,21 +77,10 @@ Si no se alcanzan las épocas:
 Si se terminó:
 - Coordinator envía STOP a todos los Workers.
 
----
 
-## **3. Diagramas del diseño concurrente**
 
-### **📌 Diagrama 1 — Diagrama general de arquitectura concurrente**
 
-![Diagrama Arquitectura](/mnt/data/deepseek_mermaid_20251121_e9c127.png)
 
----
 
-### **📌 Diagrama 2 — Diagrama de secuencia detallado**
 
-![Diagrama Secuencia](/mnt/data/b8906c20-93e2-4980-8daf-33fe19ba3a43.png)
-
----
-
-Si quieres, también puedo generar la explicación para el punto de **Aspectos**, o integrar todos los puntos en un único documento en tu lienzo.
 
