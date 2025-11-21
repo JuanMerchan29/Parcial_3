@@ -12,10 +12,10 @@ La regresión lineal con gradiente descendente es una operación que puede paral
 
 ### **Componentes principales:**
 
-### **🔹 DataLoader**  
+### ** DataLoader**  
 Carga el dataset y lo divide en **K particiones**. Cada partición representa un minibatch que será procesado por un Worker.
 
-### **🔹 Coordinator (Maestro)**
+### ** Coordinator (Maestro)**
 Controla todo el ciclo de entrenamiento:
 - Inicializa Workers.
 - Envía parámetros actuales (w, b).
@@ -24,14 +24,14 @@ Controla todo el ciclo de entrenamiento:
 - Actualiza los parámetros globales.
 - Decide cuándo detener el entrenamiento.
 
-### **🔹 Workers (Trabajadores)**
+### ** Workers (Trabajadores)**
 Cada uno:
 - Recibe parámetros (w, b).
 - Recibe un chunk de datos.
 - Calcula predicciones, errores y gradientes locales.
 - Envía los gradientes al Aggregator.
 
-### **🔹 Aggregator**
+### ** Aggregator**
 Realiza:
 - La suma o promedio de gradientes.
 - El cálculo final de los nuevos parámetros.
