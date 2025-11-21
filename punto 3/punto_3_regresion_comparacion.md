@@ -10,12 +10,12 @@ Este documento resume el **punto 3 del taller**, enfocado en:
 ## 1. Descripción General
 El objetivo es evaluar cómo cambia el rendimiento de una regresión lineal simple usando **descenso por gradiente** cuando se desarrolla en dos lenguajes distintos:
 
-### 🔹 Python
+###  Python
 - Interpretado, dinámico.
 - Uso de `numpy`, muy optimizado en C internamente.
 - Fácil de escribir, ideal para prototipos.
 
-### 🔹 Rust
+###  Rust
 - Compilado, orientado a seguridad y rendimiento.
 - Control total sobre memoria.
 - Óptimo para aplicaciones de alto rendimiento.
