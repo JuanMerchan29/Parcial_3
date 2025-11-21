@@ -1,6 +1,6 @@
 # Diseño   concurrencia
 
-A continuación se presenta una versión ampliada y más completa del diseño para la regresión lineal empleando el paradigma de concurrencia (modelo Maestro–Trabajador). Incluye la explicación paso a paso y los diagramas provistos.
+
 
 ---
 
