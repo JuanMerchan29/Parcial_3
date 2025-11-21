@@ -1,9 +1,6 @@
 # Punto 3: Implementación en Rust y Comparación con Python
 
-Este documento resume el **punto 3 del taller**, enfocado en:
-- Implementación de regresión lineal en **Rust**.
-- Comparación de desempeño entre **Python** y **Rust**.
-- Conclusiones sobre rendimiento, tiempo de ejecución y uso de memoria.
+
 
 ---
 
@@ -42,27 +39,27 @@ Se evaluaron:
 ---
 
 ## 3. Resultados
-### ⏱️ Tiempo de ejecución
+###  Tiempo de ejecución
 | Lenguaje | Tiempo estimado | Motivo |
 |---------|------------------|--------|
 | **Python** | ~1.5 ms – 4 ms | Numpy es rápido pero Python agrega overhead |
 | **Rust** | ~0.3 ms – 0.8 ms | Código compilado y optimizado |
 
-➡️ **Rust es entre 3x y 6x más rápido que Python** en este caso.
+ **Rust es entre 3x y 6x más rápido que Python** en este caso.
 
-### 💾 Uso de memoria
+###  Uso de memoria
 | Lenguaje | Memoria usada | Motivo |
 |---------|----------------|--------|
 | **Python** | 30–50 MB aprox. | Carga del intérprete + numpy |
 | **Rust** | 1–3 MB | Binario optimizado + sin intérprete |
 
-➡️ **Rust usa ~20 veces menos memoria**.
+ **Rust usa ~20 veces menos memoria**.
 
-### 🔧 CPU
+###  CPU
 - Python usa más ciclos porque evalúa expresiones en tiempo de ejecución.
 - Rust ejecuta operaciones directas a nivel máquina.
 
-### ✔️ Precisión del modelo
+###  Precisión del modelo
 - Ambos llegan prácticamente a los mismos valores:
   - `w ≈ 2.0`
   - `b ≈ 0`
@@ -71,19 +68,18 @@ Se evaluaron:
 ---
 
 ## 4. Conclusiones
-### 🟩 Ventajas de Rust
+###  Ventajas de Rust
 - Mucho más rápido.
 - Mucho menos uso de memoria.
 - Ideal para aplicaciones grandes, APIs de ML, sistemas embebidos.
 
-### 🟦 Ventajas de Python
+###  Ventajas de Python
 - Más fácil de escribir.
 - Ecosistema enorme para ciencia de datos.
 - Perfecto para prototipos y aprendizaje.
 
-### 🟨 Conclusión final
+###  Conclusión final
 Para tareas pequeñas Python es suficiente, pero para modelos que deban ejecutarse en producción con máxima eficiencia, Rust ofrece **rendimiento superior**, menos memoria y más control sobre el proceso.
 
----
 
-Si deseas agregar gráficos, tablas ampliadas o comparar diferentes tamaños de dataset, puedo incorporarlo en esta misma hoja.
+
